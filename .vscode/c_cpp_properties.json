@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/res",
+                "${workspaceFolder}/**",
+                "${GDK}/inc",
+                "${GDK}/res"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    
+                ]
+            },
+            "forcedInclude": []
+        }
+    ],
+    "version": 4
+}

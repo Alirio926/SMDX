@@ -1,0 +1,126 @@
+{    
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clean",
+            "detail": "Clean CTR + SHIFT + F5",
+            "type": "shell",
+            "windows": {
+                "command": "${env:GDK}\\bin\\make",
+                "args": [
+                    "-f",
+                    "${env:GDK}\\makefile.gen",
+                    "clean"
+                ]
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Collision",
+            "detail": "Generate Collision header",
+            "type": "shell",
+            "windows": {
+                "command": "java",
+                "args": [                    
+                    "../tools/TMXToCHConverter",
+                    "E:/GENDK/Tiled/Teste03.tmx",
+                    "E:/GENDK/Ecos-do-Tempo/inc"
+                ]
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile",
+            "detail": "Compile CTR + SHIFT + F8",
+            "type": "shell",
+            "windows": {
+                "command": "${env:GDK}\\bin\\make",
+                "args": [
+                    "-f",
+                    "${env:GDK}\\makefile.gen"
+                ]
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run on Gens",
+            "detail": "Clean CTR + SHIFT + F9",
+            "type": "shell",
+            "windows": {
+                "command": "E:\\Emulators\\GensKMod\\gens.exe",
+                "args": [
+                    "${workspaceFolder}\\out\\rom.bin"
+                ]
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run on Fusion",
+            "detail": "Clean CTR + SHIFT + F10",
+            "type": "shell",
+            "windows": {
+                "command": "E:\\Emulators\\Fusion364\\Fusion.exe",
+                "args": [
+                    "${workspaceFolder}\\out\\rom.bin"
+                ]
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run on Blastem",
+            "detail": "Clean CTR + SHIFT + F11",
+            "type": "shell",
+            "windows": {
+                "command": "E:\\Emulators\\blastem-win32-0.6.2\\blastem.exe",
+                "args": [
+                    "${workspaceFolder}\\out\\rom.bin"
+                ]
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Compile Debug",
+            "detail": "Clean CTR + SHIFT + F4",
+            "type": "shell",
+            "windows": {
+                "command": "${env:GDK}\\bin\\make",
+                "args": [
+                    "-f",
+                    "${env:GDK}\\makefile.gen",
+                    "debug"
+                ]
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

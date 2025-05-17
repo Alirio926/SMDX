@@ -1,0 +1,35 @@
+[
+    //ATENTION
+    //This file must be in appdata\Code\User folder
+    //ATENTION
+    {
+        "key": "ctrl+shift+f9",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run on Gens"
+    },
+    {
+        "key": "ctrl+shift+f10",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run on Fusion"
+    },
+    {
+        "key": "ctrl+shift+f11",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run on Blastem"
+    },
+    {
+        "key": "ctrl+shift+f4",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Compile Debug"
+    },
+    {
+        "key": "ctrl+shift+f5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Clean"
+    },
+    {
+        "key": "ctrl+shift+f8",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Compile"
+    }
+]
