@@ -1,11 +1,14 @@
-# SGDK Engine
-SGDK Engine é uma tentativa de acelerar e facilitar o desenvolvimento de jogos para o Mega Drive (Genesis) utilizando o SGDK (Sega Genesis Development Kit). 
+# SDMX - Sega Mega Drive eXtended
+SDMX - Sega Mega Drive eXtended é uma tentativa de acelerar e facilitar o desenvolvimento de jogos para o Mega Drive (Genesis) utilizando o SGDK (Sega Genesis Development Kit). 
 
 A proposta é oferecer métodos de acesso rápido para criação de objetos comuns em jogos, com uma estrutura completa e, ao mesmo tempo, flexível.
 
-Criei 3 ferramentas em java para exportar do tiled, não sendo necessário ajuste apos a extração, até os struct são criados de forma automatica:
+Criei 3 ferramentas em java para exportar do tiled, não sendo necessário ajuste apos a extração:
+
 Array de slops
+
 Array de colisão
+
 Array de objetos, se na definição do objeto forem definidos todos os itens necessários para um path_follower, o tools irá linkar o objeto com a path definida no Tiled, também irá concatenar objetos com os mesmos itens(variaveis) criando arrays. 
 
 Segue exemplo:
@@ -31,7 +34,7 @@ const Item_t Items[] = {
 };
 
 // concatenou as plataformas por terem as mesmas propriedades definidas.
-// já cria em forma de path_follower, colocando as propriedades no path_followr_def, a demais se houver, tambem serão incluidas no item externo.
+// Cria em forma de path_follower, colocando as propriedades no path_followr_def, a demais se houver, tambem serão incluidas no item externo.
 const platform_t platforms[] = {
     { .agentDef = { .position = { 416, 551 }, .path = path_43, .path_len = 3, .delayInicial = 60, .path_mode = PATHMODE_LOOP, .velocidade = FIX16(1), .sprite = "spr_platform", .w = 80, .h = 16 } },
     { .agentDef = { .position = { 235, 310 }, .path = path_34, .path_len = 2, .delayInicial = 60, .path_mode = PATHMODE_PINGPONG, .velocidade = FIX16(1), .sprite = "spr_platform", .w = 80, .h = 16 } },
@@ -56,7 +59,7 @@ spawn_entity_platform(0, DIST_EUCLIDEAN);
 Este projeto ainda está em desenvolvimento, podendo conter bugs e comportamentos inesperados. A estrutura e as funcionalidades estão em constante evolução, e várias partes do código ainda estão sendo aprimoradas ou reestruturadas.
 
 ## 💡 Colabore!
-Estamos abertos a ideias, sugestões e melhorias contínuas! Sinta-se à vontade para abrir issues, enviar pull requests ou simplesmente compartilhar seu feedback. Toda contribuição é bem-vinda para tornar este engine mais robusto, versátil e acessível.
+Estou aberto a ideias, sugestões e melhorias contínuas! Sinta-se à vontade para abrir issues, enviar pull requests ou simplesmente compartilhar seu feedback. Toda contribuição é bem-vinda para tornar este engine mais robusto, versátil e acessível.
 
 ## Objetivos principais
 Acelerar a criação de jogos no Mega Drive com o SGDK.
@@ -498,7 +501,6 @@ Para começar um diálogo, chama-se:
 DialogueState activeDialogue;
 
 // ...
-VDP_loadFont(custom_font.tileset, DMA);
 dialogue_init(&activeDialogue, PAL1, VDPTilesFilled);
 dialogue_setFont(&activeDialogue, &custom_font, PAL1);    
 
@@ -508,6 +510,8 @@ NpcSimpleDef tia = {
     .textCount = 3,
     .textMode = NPC_TEXTMODE_STOP_LAST
 };
+
+npc_createSimple(&tia);
 ```
 
 Essa função:

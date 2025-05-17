@@ -80,7 +80,6 @@ void GameInit(){
     trigger_setTarget(entityPlayer);
 
     /* --------------------------------------- */
-    VDP_loadFont(custom_font.tileset, DMA);
     dialogue_init(&activeDialogue, PAL1, VDPTilesFilled);
     dialogue_setFont(&activeDialogue, &custom_font, PAL1);    
     
